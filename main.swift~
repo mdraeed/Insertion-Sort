@@ -1,0 +1,48 @@
+// ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩
+// DO NOT ALTER THE TEXT BETWEEN THESE LINES =========={M{E{R{L{I{N{1}N}I}L}R}E}M}=====================================
+let unsortedIntegers = [5, 1, 4, 2, 8]
+// DO NOT ALTER THE TEXT BETWEEN THESE LINES =========={M{E{R{L{I{N{1}N}I}L}R}E}M}=====================================
+// ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧
+
+// func insertionSort(array: [Int]) {
+//     var key: Int
+//     var j: Int
+    
+
+    
+//     for i in 0 ... array.count {
+//        let  key = array[i]
+//        var j = i - 1
+        
+//        while j >= 0 && key < array[j] {
+//            let k = j + 1
+//            let array[k] = array[j]
+//            j = j - 1
+           
+//        }
+       
+//        array[j + 1] = key
+//     }
+// }
+// print(insertionSort(array: unsortedIntegers))
+
+var integers:[Int]=unsortedIntegers
+var swapCount : Int=0, passSwap : Int=0, swapTotal : Int=0, passes : Int=0
+print("Pass: 0, Swaps: 0/0, Array: \(integers)")
+
+for i in 1..<integers.count {
+    var key = i
+    let j = integers[key]
+    passSwap=0
+    while key > 0 && j < integers[key - 1] {
+        integers[key] = integers[key - 1]
+        swapCount += 1
+        passSwap += 1
+        key -= 1
+    }
+    integers[key] = j
+    passes += 1
+    print("Pass: \(passes), Swaps: \(passSwap)/\(swapCount), Array: \(integers)")
+}
+
+// Add your code below:
